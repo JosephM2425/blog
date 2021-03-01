@@ -1,6 +1,8 @@
 <div class="col py-3">
     <div class="card" style="width: 18rem;">
-        <img src="" class="card-img-top" alt="...">
+        <% if article.img_post.attached? %>
+            <%= image_tag url_for(article.img_post), class:"card-img-top"%>
+        <% end %>
         <div class="card-body">
         <h5 class="card-title"> <%= article.title %> </h5>
         <p class="text-secondary card-text"> <%= article.created_at %> </p>

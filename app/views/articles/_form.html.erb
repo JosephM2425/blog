@@ -16,10 +16,14 @@
         </div>
 
         <div class="field py-3">
+            <%=form.label :img_post%>
+            <%=form.file_field :img_post%>
+        </div>
+
+        <div class="field py-3">
             <%=form.label :content%>
             <%=form.rich_text_area :content%>
         </div>
-
 
         <div>
             <%=form.submit%>

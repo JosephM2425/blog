@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
     has_rich_text :content
+    has_one_attached :img_post
     belongs_to :user # campo adicional
     has_many :has_categories
     has_many :categories, through: :has_categories

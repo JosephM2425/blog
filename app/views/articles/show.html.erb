@@ -5,8 +5,13 @@
         <% if current_user.avatar.attached? %>
             <%= image_tag url_for(current_user.avatar), height: 50 %>
         <% end %>
+
+        <% if @article.img_post.attached? %>
+            <%= image_tag url_for(@article.img_post), height: 300 %>
+        <% end %>
     </div>
     <p> <%= @article.content %> </p>
+
 
     <div>
         <p class="label">Tags</p>
